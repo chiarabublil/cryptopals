@@ -25,7 +25,6 @@ for key in range(256):
 
 max=0
 p=""
-k=0
 key=0
 for c in candidati:
     score=0
@@ -34,8 +33,7 @@ for c in candidati:
     if(score>max): 
         max=score
         p=c
-        key=k
-    k=k+1
+        key=candidati.index(c)
 
 print("score: ", max)
 print("plaintext: ", p.decode('UTF-8'))
